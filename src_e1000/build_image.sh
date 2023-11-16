@@ -5,13 +5,13 @@ work_dir=$PWD
 rootfs="rootfs"
 rootfs_img=$PWD"/rootfs_img"
 
-make LLVM=1
+# make LLVM=1
 echo $base_path
 if [ ! -d $rootfs ]; then
     mkdir $rootfs
 fi
 cp $busybox_folder/_install/*  $rootfs/ -rf
-cp $work_dir/r4l_e1000_demo.ko $work_dir/$rootfs/
+# cp $work_dir/r4l_e1000_demo.ko $work_dir/$rootfs/
 cd $rootfs
 if [ ! -d proc ] && [ ! -d sys ] && [ ! -d dev ] && [ ! -d etc/init.d ]; then
     mkdir proc sys dev etc etc/init.d

@@ -163,4 +163,12 @@ config SAMPLE_RUST_SELFTESTS
 
 	  If unsure, say N.
 
+config SAMPLE_RUST_E1000
+	tristate "tests"
+	default y
+	help
+	  This option builds the self test cases for Rust.
+
+	  If unsure, say N.
+
 endif # SAMPLES_RUST
